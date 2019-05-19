@@ -1,12 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({data}) => (
+  <Layout
+  image={data.coverImage.childImageSharp.fluid}
+  >
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -19,3 +21,16 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+
+export const pagequery = graphql`
+query {
+  coverImage: file(relativePath: {eq: "background.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 2000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`

@@ -1,33 +1,42 @@
-import { Link } from "gatsby"
+import { Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from 'gatsby-image'
 
-const Header = ({ siteTitle }) => (
+
+const Header = ({ siteTitle, cover }) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
+  <div  style={{
+      position: `relative`,
+      height: `120px`
+    }}>
+   <Img fluid={cover} alt="Barbara's background" 
+   /> 
+   <h1 style={{
+      position: `absolute`,
+      color: `white`,
+      top:`50%`,
+      left: `50%`,
+      transform: `translate(-50%, -50%)`,
+      textAlign: `center`,
+      wordWrap: `noWrap`
+  
+    }}
+    > <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
-        >
-          {siteTitle}
+        >{siteTitle}
         </Link>
-      </h1>
-    </div>
+        </h1>
+   </div>
+    testing 123
   </header>
 )
 
@@ -40,3 +49,4 @@ Header.defaultProps = {
 }
 
 export default Header
+
