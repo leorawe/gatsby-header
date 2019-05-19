@@ -23,7 +23,8 @@ const Header = ({ siteTitle, cover }) => (
       left: `50%`,
       transform: `translate(-50%, -50%)`,
       textAlign: `center`,
-      wordWrap: `noWrap`
+      wordWrap: `noWrap`,
+      textShadow: `-1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020`
   
     }}
     > <Link
