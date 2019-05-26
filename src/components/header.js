@@ -7,12 +7,12 @@ import Img from 'gatsby-image'
 const Header = ({ siteTitle, cover }) => (
   <header
     style={{
-      marginBottom: `1.45rem`,
+      marginBottom: `1.5rem`,
     }}
   >
   <div  style={{
       position: `relative`,
-      height: `120px`
+      height: `180px`
     }}>
    <Img fluid={cover} alt="Barbara's background" 
    /> 
@@ -37,7 +37,7 @@ const Header = ({ siteTitle, cover }) => (
         </Link>
         </h1>
    </div>
-    testing 123
+
   </header>
 )
 

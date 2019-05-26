@@ -25,7 +25,7 @@ export default IndexPage
 
 export const pagequery = graphql`
 query {
-  coverImage: file(relativePath: {eq: "background.jpg"}) {
+  coverImage: file(relativePath: {eq: "back-400.jpg"}) {
     childImageSharp {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid
