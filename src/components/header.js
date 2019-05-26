@@ -2,9 +2,10 @@ import { Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Img from 'gatsby-image'
+import styled from '@emotion/styled'
 
 
-const Header = ({ siteTitle, cover }) => (
+const Header = ({ siteTitle, siteDesc, cover }) => (
   <header
     style={{
       marginBottom: `1.5rem`,
@@ -33,20 +34,24 @@ const Header = ({ siteTitle, cover }) => (
             color: `white`,
             textDecoration: `none`,
           }}
-        >{siteTitle}
+        >{siteTitle} 
         </Link>
+        
         </h1>
+        <div>{siteDesc}</div>
    </div>
-
+  
   </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteDesc: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  siteDesc: ``,
 }
 
 export default Header

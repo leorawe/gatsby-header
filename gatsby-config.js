@@ -1,8 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Barbara Gelfand, LCSW`,
+    description: `Licensed Clinical Social Worker`,
+    author: `none`,
+    headerLinks: [
+      {
+        name: '🏡',
+        link: '/',
+      },
+      {
+        name: 'About',
+        link: '/about',
+      },
+      {
+        name: 'Education and Work History',
+        link: '/education',
+      },
+      {
+        name: 'Contact',
+        link: '/contact',
+      }
+    ],
   },
   plugins: [
     {
