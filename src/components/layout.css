@@ -617,4 +617,21 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.navbar-burger {
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+  margin-left: auto;
+}
 
+.navbar-burger {display: none;}
+
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+}
