@@ -2,8 +2,6 @@ import { Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Img from 'gatsby-image'
-import styled from '@emotion/styled'
-
 
 const Header = ({ siteTitle, siteDesc, cover }) => (
   <header
@@ -17,29 +15,47 @@ const Header = ({ siteTitle, siteDesc, cover }) => (
     }}>
    <Img fluid={cover} alt="Barbara's background" 
    /> 
-   <h1 style={{
+     <div style={{
+      position: `absolute`,
+      backgroundColor: `#669933`,
+      top:`50%`,
+      left: `50%`,
+      transform: `translate(-50%, -50%)`,
+      zIndex: `8`,
+      content: ``,
+      width: `410px`,
+      height: `80px`,
+      opacity: `.7`,
+      borderRadius: `10px`,
+     }} >
+     </div>
+   <div style={{
       position: `absolute`,
       color: `white`,
       top:`50%`,
       left: `50%`,
       transform: `translate(-50%, -50%)`,
       textAlign: `center`,
+      fontWeight: `800`,
       wordWrap: `noWrap`,
-      textShadow: `-1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020`
-  
+      zIndex: `99`,
+      textShadow: `1px 1px 4px rgba(34,34,34,0.6)`,
     }}
     > <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
+            fontSize: `2rem`,
           }}
         >{siteTitle} 
         </Link>
-        
-        </h1>
-        <div>{siteDesc}</div>
-   </div>
+        <div style={{
+            fontSize: `1.25rem`,
+          }}>{siteDesc}
+          </div>
+        </div>
+      </div>
   
   </header>
 )

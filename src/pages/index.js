@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import styled from '@emotion/styled'
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
 import SEO from "../components/seo"
 
 const HotHeader = styled.h1`
@@ -40,7 +39,7 @@ export default IndexPage
 
 export const pagequery = graphql`
 query {
-  coverImage: file(relativePath: {eq: "back-400.jpg"}) {
+  coverImage: file(relativePath: {eq: "gelfand-cover-400.jpg"}) {
     childImageSharp {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid

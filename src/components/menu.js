@@ -2,6 +2,10 @@ import { Link} from "gatsby"
 import React from "react"
 import styled from '@emotion/styled'
 
+const HeaderWrapper = styled.div`
+  width: 100%;
+  background-color: #333;
+`
 const HeaderNav = styled.nav`
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +17,7 @@ const HeaderNav = styled.nav`
   justify-content: flex-start;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: #333;
 `
 
 const HeaderLink = styled(Link)`
@@ -20,6 +25,7 @@ const HeaderLink = styled(Link)`
   display: flex;
   align-items: center;
   color: #fff;
+  text-decoration: none;
   border: 0;
   margin: 0;
   margin-right: 0.5rem;
@@ -28,9 +34,12 @@ const HeaderLink = styled(Link)`
   min-width: 42px;
   font-size: 12px;
   z-index: 10;
+  &:hover {
+    color: #99cc66;
+  }
 `
 const Menu = ({headerLinks}) => (
- 
+ <HeaderWrapper>
    <HeaderNav>
         {headerLinks.map((headerLink, i) => (
             <HeaderLink to={headerLink.link} key={`header-link-${i}`}>
@@ -38,7 +47,7 @@ const Menu = ({headerLinks}) => (
             </HeaderLink>
             ))}
         </HeaderNav>
-
+</HeaderWrapper>
 )
 
 export default Menu
