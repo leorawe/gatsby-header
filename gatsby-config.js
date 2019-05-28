@@ -33,11 +33,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: `gatsby-plugin-emotion`,
       options: {
         // Add any options here
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
