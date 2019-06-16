@@ -1,9 +1,11 @@
 import { Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Img from 'gatsby-image'
+//import Img from 'gatsby-image'
 
-const Header = ({ siteTitle, siteDesc, cover }) => (
+import CoverImage from "./coverimage"
+
+const Header = ({ siteTitle, siteDesc }) => (
   <header
     style={{
       marginBottom: `1.5rem`,
@@ -13,8 +15,7 @@ const Header = ({ siteTitle, siteDesc, cover }) => (
       position: `relative`,
       height: `180px`
     }}>
-   <Img fluid={cover} alt="Barbara's background" 
-   /> 
+   <CoverImage />
      <div style={{
       position: `absolute`,
       backgroundColor: `#669933`,

@@ -13,7 +13,7 @@ import Header from "./header"
 import Menu from "./menu"
 import "./layout.css"
 
-const Layout = ({ children, image }) => (
+const Layout = ({ children, }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -36,7 +36,6 @@ const Layout = ({ children, image }) => (
         />
         <Header siteTitle={data.site.siteMetadata.title}
         siteDesc={data.site.siteMetadata.description}
-        cover={image}
          />
         <div
           style={{

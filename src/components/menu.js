@@ -5,8 +5,6 @@ import styled from 'styled-components'
 
 import media from './mediaqueries'
 
-//import Navbar from './navbar'
-
 const HeaderWrapper = styled.div`
   width: 100%;
   background-color: #333;

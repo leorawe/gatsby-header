@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link} from "gatsby"
 import styled from '@emotion/styled'
 
 import Layout from "../components/layout"
@@ -20,9 +20,7 @@ const HotHeader = styled.h1`
 `
 
 const IndexPage = ({data}) => (
-  <Layout
-  image={data.coverImage.childImageSharp.fluid}
-  >
+  <Layout>
     <SEO title="Home" />
     <HotHeader>Hi people</HotHeader>
     <p>Welcome to your new Gatsby site.</p>
@@ -37,14 +35,14 @@ const IndexPage = ({data}) => (
 export default IndexPage
 
 
-export const pagequery = graphql`
-query {
-  coverImage: file(relativePath: {eq: "gelfand-cover-400.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 2000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-}
-`
+// export const coverimage = graphql`
+// query {
+//   coverImage: file(relativePath: {eq: "gelfand-cover-400.jpg"}) {
+//     childImageSharp {
+//       fluid(maxWidth: 2000) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// }
+// `
